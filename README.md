@@ -6,6 +6,14 @@ Basic example template for AWS lambda in Node using JavaScript.
 You could use `docker-compose` for development as it mounts your development 
 project in Docker container.
 
+In order to initiate lambda container for application please run:
+
+    ~$: make up
+
+After each change to source code you need to down container and up them again:
+
+    ~$: make down
+
 
 ## Deployment
 

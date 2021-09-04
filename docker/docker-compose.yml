@@ -1,0 +1,25 @@
+version: "3"
+services:
+  lambda:
+    image: syniol/lambda-node:14
+    build:
+      context: .
+      dockerfile: node/Dockerfile
+    command: [ "app.handler" ]
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 2024mb
+    ports:
+      - 4000:8080
+    volumes:
+      - ../:/var/task
+    environment:
+      NODE_ENV: development
+    networks:
+      - syniol_lambda
+
+networks:
+  syniol_lambda:
+    driver: bridge

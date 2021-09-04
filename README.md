@@ -15,6 +15,12 @@ After each change to source code you need to down container and up them again:
     ~$: make down
 
 
+## Test Endpoint
+Please ensure you have `curl` installed in your host machine; and the run:
+
+    curl -XPOST "http://localhost:4000/2015-03-31/functions/function/invocations" -d '{}'
+
+
 ## Deployment
 
     ~$: docker build -t syniol.dev/node:14 .
@@ -26,11 +32,6 @@ After each change to source code you need to down container and up them again:
  * LAMBDA_TASK_ROOT: `/var/task`
  * LAMBDA_RUNTIME_DIR: `/var/runtime`
 
-
-### Test Endpoint
-Please ensure you have `curl` installed in your host machine; and the run:
-
-    curl -XPOST "http://localhost:4000/2015-03-31/functions/function/invocations" -d '{}'
 
 #### Credits
 2021 &copy; Syniol Limited. All rights reserved.

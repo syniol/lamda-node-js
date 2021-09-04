@@ -10,7 +10,7 @@ COPY yarn.lock ${LAMBDA_TASK_ROOT}
 
 WORKDIR ${LAMBDA_TASK_ROOT}
 
-RUN yarn && yarn test
+RUN yarn
 # Set the CMD to your handler CMD [ "app.handler" ]
 
 CMD [ "app.handler" ]

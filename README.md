@@ -12,11 +12,17 @@ project in Docker container.
     ~$: docker build -t syniol.dev/node:14 .
     ~$: docker run --name syniol-lambda-node --rm -p 80:8080 syniol.dev/node:14
 
-### Docker Image
 
- * LAMBDA_TASK_ROOT: /var/task
- * LAMBDA_RUNTIME_DIR: /var/runtime
+### Docker Image Environment Variables
 
+ * LAMBDA_TASK_ROOT: `/var/task`
+ * LAMBDA_RUNTIME_DIR: `/var/runtime`
+
+
+### Test Endpoint
+Please ensure you have `curl` installed in your host machine; and the run:
+
+    curl -XPOST "http://localhost:4000/2015-03-31/functions/function/invocations" -d '{}'
 
 #### Credits
 2021 &copy; Syniol Limited. All rights reserved.

@@ -1,6 +1,5 @@
+const { Main } = require('./functions/greeting')
+
 exports.handler = async (event, context) => {
-    return {
-        statusCode: 200,
-        body: JSON.stringify('Hello from Syniol!'),
-    };
+  return Main()
 }

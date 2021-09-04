@@ -1,0 +1,10 @@
+{
+  "name": "node-lambda-js-skeleton",
+  "version": "1.0.0",
+  "description": "Containerised skeleton template project for AWS Lambda using NodeJS runtime and JavaScript ",
+  "main": "app.js",
+  "repository": "https://github.com/syniol/lamda-node-js.git",
+  "author": "Hadi Tajallaei <hadi@syniol.com>",
+  "license": "proprietary",
+  "private": true
+}
